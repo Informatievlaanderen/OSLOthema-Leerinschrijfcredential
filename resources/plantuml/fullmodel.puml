@@ -1,0 +1,87 @@
+@startuml
+skinparam nodesep 150
+skinparam linetype ortho
+allowmixing
+
+class Persoon {
+    + geboorteDatum: GenericDateTime 
+}
+class Groep
+class Leercredential
+together{
+    class Leeractiviteit
+    class ToegekendRecht
+}
+class GeregistreerdPersoon
+class Organisatie
+class Leerclaim
+class LeeractiviteitSpecificatie
+class LeerprestatieSpecificatie
+class ToegekendRechtSpecificatie
+class Kwalificatie
+
+class Studentenkaart {
+    + identificator: Identificator
+    + uitgaveDatum:  DateTime
+    + vervalDatum:   DateTime
+
+}
+class Inschrijvingsbewijs {
+    + academischeJaar: Year
+    + contractType: ContractType [1..*]
+    + inschrijvingsDatum: DateTime
+    + leeractiviteiten: Leeractiviteit [1..*]
+}
+
+
+enum GenericDateTime{
+    + jaar  
+    + maandJaar
+    + dagMaandJaar
+    + dateTime
+}
+enum ContractType {
+    + KredietContract
+    + ExamenContract
+    + DiplomaContract
+}
+
+
+node a
+hide a
+
+Persoon <|-- GeregistreerdPersoon: " registratie"
+GenericDateTime -u[hidden]- GeregistreerdPersoon
+ContractType -u[hidden]- GeregistreerdPersoon 
+
+
+Groep "0..*" <-- Persoon: "isGroepslidVan"
+Leercredential  --  Leercredential
+Leercredential "heeftCredential \n 0..*"-r-"\t\t eigenaar 1" Persoon
+Organisatie "1  " <--  Leercredential: "uitgever"
+Organisatie  --  Organisatie
+
+Persoon -r->"heeftClaim \n 1" Leerclaim
+Leeractiviteit -[hidden]- ToegekendRecht
+Leerclaim <|-r- Leeractiviteit
+Leerclaim <|-r- ToegekendRecht
+
+
+Leeractiviteit -r-> "1" LeeractiviteitSpecificatie: "specificatie"
+LeeractiviteitSpecificatie "beïnvloedDoor 0..*" <--> "beïnvloedt 0..*"LeerprestatieSpecificatie
+LeerprestatieSpecificatie "resultaatVan 0..*" <--> "geeftRechtOp 0..*" ToegekendRechtSpecificatie
+
+ToegekendRecht -r-> ToegekendRechtSpecificatie
+ToegekendRechtSpecificatie <|-- Kwalificatie
+a -u- Leercredential
+Studentenkaart -u-|> a
+Inschrijvingsbewijs -u-|> a
+
+Studentenkaart -u-|> Leercredential
+Inschrijvingsbewijs -u-|> Leercredential
+
+
+
+
+
+@enduml

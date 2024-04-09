@@ -1,0 +1,22 @@
+
+@startuml
+skinparam nodesep 150
+skinparam linetype ortho
+allowmixing
+
+
+enum GenericDateTime{
+    + jaar  
+    + maandJaar
+    + dagMaandJaar
+    + dateTime
+}
+enum ContracType {
+    + KredietContract
+    + ExamenContract
+    + DiplomaContract
+}
+
+
+
+@enduml
