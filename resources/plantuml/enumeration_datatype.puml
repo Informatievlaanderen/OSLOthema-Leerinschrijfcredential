@@ -11,7 +11,7 @@ enum GenericDateTime{
     + dagMaandJaar
     + dateTime
 }
-enum ContracType {
+enum ContractType {
     + KredietContract
     + ExamenContract
     + DiplomaContract
