@@ -1,0 +1,5 @@
+{
+    "@context": "https://test.data.vlaanderen.be/doc/applicatieprofiel/studentenattesten/ontwerpstandaard/2024-04-08/context/studentenattesten-ap.jsonld", 
+    "@type": "Persoon"
+
+}
