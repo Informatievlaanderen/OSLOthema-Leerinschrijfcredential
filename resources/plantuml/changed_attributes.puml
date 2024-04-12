@@ -25,6 +25,9 @@ class Kwalificatie
 node a
 hide a
 
+Leerclaim  -[hidden]- Groep
+Organisatie "uitgever 1" <-- Leerclaim
+
 Persoon <|-- GeregistreerdPersoon: " registratie"
 Groep "0..*" <-- Persoon: "isGroepslidVan"
 Leercredential  --  Leercredential

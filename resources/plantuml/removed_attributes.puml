@@ -26,11 +26,14 @@ class Kwalificatie
 node a
 hide a
 
+Leerclaim  -[hidden]- Groep
+Organisatie "uitgever 1" <-- Leerclaim
+
 Persoon <|-- GeregistreerdPersoon: " registratie"
 Groep "0..*" <-- Persoon: "isGroepslidVan"
 Leercredential  --  Leercredential
 Leercredential "heeftCredential \n 0..*"-r-"\t\t eigenaar 1" Persoon
-Organisatie "1  " <--  Leercredential: "uitgever"
+Organisatie "uitgever 1" <--  Leercredential
 Organisatie  --  Organisatie
 
 Persoon -r->"heeftClaim \n 1" Leerclaim

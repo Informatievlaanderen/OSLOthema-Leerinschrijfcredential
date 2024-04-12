@@ -3,6 +3,15 @@ skinparam nodesep 150
 skinparam linetype ortho
 allowmixing
 
+class ToekenningsProcess {
+    + identificator: Identificator [0..*]
+    + toekenningsDatum: DateTime [0..1]
+    + nationaalSysteemNota: TaalString [0..1]
+    + beschrijfving: TaalString  [0..1]
+    + extraInformatie: String [0..*]
+    + locatie: Locatie [0..1]
+
+}
 class Persoon {
     + geboorteDatum: GenericDateTime 
 }
@@ -49,6 +58,11 @@ enum ContractType {
 
 node a
 hide a
+
+Leerclaim  -[hidden]- Groep
+Organisatie "uitgever 1" <-- Leerclaim
+ToekenningsProcess "toegekendDoor 1" <---> "kentToe 0..*" Leerclaim
+ToekenningsProcess --->"uitgevoerdDoor 1..*" Organisatie
 
 Persoon <|-- GeregistreerdPersoon: " registratie"
 GenericDateTime -u[hidden]- GeregistreerdPersoon

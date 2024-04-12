@@ -4,16 +4,17 @@ skinparam nodesep 150
 skinparam linetype ortho
 allowmixing
 
+class Organisatie
+class Leerclaim
+class Leercredential
+
 class Persoon
 class Groep
-class Leercredential
 together{
     class Leeractiviteit
     class ToegekendRecht
 }
 class GeregistreerdPersoon
-class Organisatie
-class Leerclaim
 class LeeractiviteitSpecificatie
 class LeerprestatieSpecificatie
 class ToegekendRechtSpecificatie
@@ -25,12 +26,15 @@ class Kwalificatie
 node a
 hide a
 
+Leerclaim  -[hidden]- Groep
+Organisatie "uitgever 1" <-- Leerclaim
+Organisatie "uitgever 1" <--  Leercredential
+Organisatie  --  Organisatie
+
 Persoon <|-- GeregistreerdPersoon: " registratie"
 Groep "0..*" <-- Persoon: "isGroepslidVan"
 Leercredential  --  Leercredential
 Leercredential "heeftCredential \n 0..*"-r-"\t\t eigenaar 1" Persoon
-Organisatie "1  " <--  Leercredential: "uitgever"
-Organisatie  --  Organisatie
 
 Persoon -r->"heeftClaim \n 1" Leerclaim
 Leeractiviteit -[hidden]- ToegekendRecht
