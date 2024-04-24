@@ -2,3 +2,4 @@
 *.ldb
 *.xlsm
 .vscode/
+resources/data-example.json
