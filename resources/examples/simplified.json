@@ -1,142 +1,158 @@
 {
-  "@context": "https://test.data.vlaanderen.be/doc/applicatieprofiel/studentenattesten/ontwerpstandaard/2024-04-08/context/studentenattesten-ap.jsonld",
-  "@type": "Persoon",
-  "voornaam": "Alice",
-  "achternaam": "Malice",
-  "geboortedatum": "1995-05",
-  "gender": "vrouw",
-  "staatsburgerschap": "België",
-  "heeftCredential":[{
-      "type": "Studentenkaart", 
-      "uitgever": "<ugent>", 
-      "uitgavedatum": "2024-08-05", 
-      "geldigVan": "2024-09-25", 
-      "vervaldatum": "2029-09-25"
-  }, 
-  
-  {
-    "type": "Inschrijvingsbewijs",
-    "uitgever": "<ugent>",
-    "uitgavedatum": "2024-08-05",
-    "geldigVan": "2024-09-25",
-    "vervaldatum": "2025-09-12",
-
-    "inschrijvingsdatum": "2024-07-05", 
-    "academischeJaar": "2024", 
-    "contractType": [
-      {"type": "ExamenContract"},
-      {"type": "CreditContract"}
+    "@context": "https://test.data.vlaanderen.be/doc/applicatieprofiel/studentenattesten/ontwerpstandaard/2024-04-08/context/studentenattesten-ap.jsonld",
+    "@type": "Persoon",
+    "voornaam": "Alice",
+    "achternaam": "Malice",
+    "geboortedatum": "1995-05",
+    "gender": "vrouw",
+    "staatsburgerschap": "België",
+    "heeftCredential": [
+        {
+            "type": "Studentenkaart",
+            "uitgever": "<ugent>",
+            "uitgavedatum": "2024-08-05",
+            "geldigVan": "2024-09-25",
+            "vervaldatum": "2029-09-25"
+        },
+        {
+            "type": "Inschrijvingsbewijs",
+            "uitgever": "<ugent>",
+            "uitgavedatum": "2024-08-05",
+            "geldigVan": "2024-09-25",
+            "vervaldatum": "2025-09-12",
+            "inschrijvingsdatum": "2024-07-05",
+            "academischeJaar": "2024",
+            "contractType": [
+                {
+                    "type": "ExamenContract"
+                },
+                {
+                    "type": "CreditContract"
+                }
+            ],
+            "leeractiviteiten": [
+                "inleiding_prog",
+                "linear_algebra",
+                "scripting_talen"
+            ]
+        }
     ],
-    "leeractiviteiten": [
-      
-      "inleiding_prog", "linear_algebra", "scripting_talen"
-      
+    "heeftClaim": [
+        {
+            "@id": "<toegekend_recht1>",
+            "type": "ToegekendRecht",
+            "specificatie": "<entitlement_spec1>",
+            "beschrijving": "Toegang tot computer labo op Campus Sterre",
+            "vervaldatum": "2027-07-30",
+            "uitgavedatum": "2024-09-25"
+        },
+        {
+            "@id": "bachelor_informatica",
+            "type": "Leeractiviteit",
+            "titel": "Bachelor in de Informatica",
+            "heeftDeel": [
+                {
+                    "@id": "inleiding_prog",
+                    "type": "Leeractiviteit",
+                    "titel": "Inleiding tot Programmeren",
+                    "specificatie": [
+                        {
+                            "type": "Onderwijs programma",
+                            "leervolume": "240 uren",
+                            "onderwijsmethode": "Offline op campus",
+                            "titel": "Inleiding tot Programmeren Specificatie",
+                            "beïnvloedt": [
+                                {
+                                    "type": "Leerprestatie Specificatie subtype",
+                                    "kredietpunten": "6 ECTS",
+                                    "onderwijsniveau": "Hoger onderwijs",
+                                    "studiegebied": "Informatica",
+                                    "geeftRechtOp": [
+                                        {
+                                            "@id": "<entitlement_spec1>",
+                                            "geldigBij": "<ugent>",
+                                            "geldigBinnen": "België"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "periode": {
+                        "naam": "Eerste Semester",
+                        "begindatum": "2024-09-25",
+                        "eindedatum": "2024-12-15"
+                    },
+                    "locatie": {
+                        "plaatsnaam": "Ghent"
+                    },
+                    "voltooingsniveau": "0%",
+                    "workload": "0 hours",
+                    "instructietaal": "Nederlands",
+                    "toegkendDoor": [
+                        {
+                            "@id": "<tokenning_1>",
+                            "beschrijving": "Officiële UGent toekenningsprocess",
+                            "toekenningsDatum": "2024-07-08",
+                            "uitgevoerdDoor": [
+                                {
+                                    "@id": "<ugent>",
+                                    "type": "Universiteit",
+                                    "homepage": "www.ugent.be",
+                                    "voorkeursnaam": "Universiteit Gent",
+                                    "alternatievenaam": "UGent"
+                                }
+                            ]
+                        }
+                    ],
+                    "uitgever": {
+                        "@id": "<ahovoks>",
+                        "type": "Overheidsinstelling",
+                        "homepage": "www.ahovoks.be",
+                        "voorkeursnaam": "Agentschap voor Hoger Onderwijs, Volwassenonderwijs, Kwalificaties en Studietoelagen",
+                        "alternatievenaam": "Ahovoks"
+                    }
+                },
+                {
+                    "@id": "linear_algebra",
+                    "type": "Leeractiviteit",
+                    "titel": "Linear Algebra",
+                    "uitgever": {
+                        "@id": "<kuleuven>",
+                        "alternatievenaam": "KULeuven",
+                        "homepage": "www.kuleuven.be",
+                        "type": "Universiteit",
+                        "voorkeursnaam": "Katholieke Universiteit Leuven"
+                    },
+                    "periode": {
+                        "naam": "Eerste Semester",
+                        "begindatum": "2024-09-25",
+                        "eindedatum": "2024-12-15"
+                    },
+                    "locatie": {
+                        "plaatsnaam": "Ghent"
+                    },
+                    "voltooingsniveau": "0%",
+                    "workload": "0 hours",
+                    "instructietaal": "Nederlands"
+                },
+                {
+                    "@id": "scripting_talen",
+                    "type": "Leeractiviteit",
+                    "titel": "Scriptingtalen",
+                    "periode": {
+                        "naam": "Eerste Semester",
+                        "begindatum": "2024-09-25",
+                        "eindedatum": "2024-12-15"
+                    },
+                    "locatie": {
+                        "plaatsnaam": "Ghent"
+                    },
+                    "voltooingsniveau": "0%",
+                    "workload": "0 hours",
+                    "instructietaal": "Nederlands"
+                }
+            ]
+        }
     ]
-  }
-  ],
-  "heeftClaim": [
-    {
-      "@id": "<toegekend_recht1>",
-      "type": "ToegekendRecht",
-      "specificatie": "<entitlement_spec1>",
-      "beschrijving": "Toegang tot computer labo op Campus Sterre", 
-      "vervaldatum": "2027-07-30", 
-      "uitgavedatum": "2024-09-25"
-    },
-    
-    {
-      "@id": "inleiding_prog", 
-    "type": "Leeractiviteit",
-    "titel": "Inleiding tot Programmeren",
-    "specificatie": [{
-      "type": "Onderwijs programma", 
-      "leervolume": "240 uren",
-      "onderwijsmethode": "Offline op campus",
-      "titel": "Inleiding tot Programmeren Specificatie",
-      "beïnvloedt": [{
-          "type": "Leerprestatie Specificatie subtype", 
-          "kredietpunten": "6 ECTS",
-          "onderwijsniveau": "Hoger onderwijs", 
-          "studiegebied": "Informatica", 
-          "geeftRechtOp": [{
-              "@id": "<entitlement_spec1>", 
-              "geldigBij": "<ugent>", 
-              "geldigBinnen": "België"
-          }]
-
-      }]
-    }],
-    "periode": {
-
-      "naam": "Eerste Semester",
-      "begindatum": "2024-09-25",
-      "eindedatum": "2024-12-15"
-    },
-    "locatie": {
-      "plaatsnaam": "Ghent"
-    },
-    "voltooingsniveau": "0%",
-    "workload": "0 hours",
-    "instructietaal": "Nederlands", 
-    "toegkendDoor":[{
-        "@id": "<tokenning_1>", 
-        "beschrijving": "Officiële UGent toekenningsprocess",
-        "toekenningsDatum": "2024-07-08",
-        "uitgevoerdDoor": [{
-            "@id": "<ugent>", 
-            "type": "Universiteit", 
-            "homepage": "www.ugent.be", 
-            "voorkeursnaam": "Universiteit Gent", 
-            "alternatievenaam": "UGent"
-    
-        }]
-    }],
-    "uitgever": {
-      "@id": "<ahovoks>", 
-      "type": "Overheidsinstelling", 
-      "homepage": "www.ahovoks.be", 
-      "voorkeursnaam": "Agentschap voor Hoger Onderwijs, Volwassenonderwijs, Kwalificaties en Studietoelagen", 
-      "alternatievenaam": "Ahovoks"
-    }
-  },
-  {
-    "@id":"linear_algebra", 
-    "type": "Leeractiviteit",
-    "titel": "Linear Algebra",
-    "uitgever":{
-      "@id": "<kuleuven>",
-      "alternatievenaam": "KULeuven", 
-      "homepage": "www.kuleuven.be", 
-      "type": "Universiteit",
-      "voorkeursnaam": "Katholieke Universiteit Leuven"
-    },
-    "periode": {
-      "naam": "Eerste Semester",
-      "begindatum": "2024-09-25",
-      "eindedatum": "2024-12-15"
-    },
-    "locatie": {
-      "plaatsnaam": "Ghent"
-    },
-    "voltooingsniveau": "0%",
-    "workload": "0 hours",
-    "instructietaal": "Nederlands"
-  },
-  {
-    "@id": "scripting_talen",
-    "type": "Leeractiviteit",
-    "titel": "Scriptingtalen",
-    "periode": {
-      "naam": "Eerste Semester",
-      "begindatum": "2024-09-25",
-      "eindedatum": "2024-12-15"
-    },
-    "locatie": {
-      "plaatsnaam": "Ghent"
-    },
-    "voltooingsniveau": "0%",
-    "workload": "0 hours",
-    "instructietaal": "Nederlands"
-  }
-  ]
 }
