@@ -50,6 +50,17 @@
             "@id": "bachelor_informatica",
             "type": "Leeractiviteit",
             "titel": "Bachelor in de Informatica",
+            "periode": {
+                "naam": "Eerste Semester",
+                "begindatum": "2024-09-25",
+                "eindedatum": "2024-12-15"
+            },
+            "locatie": {
+                "plaatsnaam": "Ghent"
+            },
+            "voltooingsniveau": "0%",
+            "workload": "0 hours",
+            "instructietaal": "Nederlands",
             "heeftDeel": [
                 {
                     "@id": "inleiding_prog",
