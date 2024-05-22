@@ -1,4 +1,5 @@
 Voornaam;Naam;Affiliatie;E-mail;Website;MijnKolom;
-AuteurVoornaam;AuteurNaam;AuteurAffiliatie;auteurvoornaam.auteurnaam@auteurdomein;https://auteurwebsiteurl;A;
-Sitt;Min Oo;;x.sittminoo@ugent.be;;E; 
+Sitt;Min Oo;imec-IDLab-UGent;x.sittminoo@ugent.be;https://knows.idlab.ugent.be/;E; 
+Ben;De Meester;imec-IDLab-UGent;ben.demeester@ugent.be;https://knows.idlab.ugent.be/;A; 
+Dimitri;Schepers;Digitaal Vlaanderen;dimitri.schepers@vlaanderen.be;https://www.vlaanderen.be/digitaal-vlaanderen;A;
 MedewerkerVoornaam;MedewerkerNaam;MedewerkerAffiliatie;medewerkervoornaam.medewerkernaam@medewerkerdomein;https://medewerkerwebsiteurl;C;
