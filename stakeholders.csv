@@ -1,5 +1,34 @@
 Voornaam;Naam;Affiliatie;E-mail;Website;MijnKolom;
+Dimitri;Schepers;Athumi;dimitri.schepers@athumi.eu;https://athumi.eu/;A;
+Rob;Van Hooreweder;Athumi;rob.vanhooreweder@athumi.eu;https://athumi.eu/;A;
+Kurt;Ryckaert;Athumi;kurt.ryckaert@athumi.eu;https://athumi.eu/;A;
+Isabaut;Martens;Digitaal Vlaanderen;isabaut.martens@vlaanderen.be;https://www.vlaanderen.be/digitaal-vlaanderen;E;
+Sam;Van Gramberen;Digitaal Vlaanderen;sam.vangramberen@vlaanderen.be;https://www.vlaanderen.be/digitaal-vlaanderen;E;
+Mathieu;Tulpinck;Digitaal Vlaanderen;mathieu.tulpinck@vlaanderen.be;https://www.vlaanderen.be/digitaal-vlaanderen;E;
 Sitt;Min Oo;imec-IDLab-UGent;x.sittminoo@ugent.be;https://knows.idlab.ugent.be/;E; 
-Ben;De Meester;imec-IDLab-UGent;ben.demeester@ugent.be;https://knows.idlab.ugent.be/;A; 
-Dimitri;Schepers;Digitaal Vlaanderen;dimitri.schepers@vlaanderen.be;https://www.vlaanderen.be/digitaal-vlaanderen;A;
-MedewerkerVoornaam;MedewerkerNaam;MedewerkerAffiliatie;medewerkervoornaam.medewerkernaam@medewerkerdomein;https://medewerkerwebsiteurl;C;
+Ben;De Meester;imec-IDLab-UGent;ben.demeester@ugent.be;https://knows.idlab.ugent.be/;E; 
+;;AGODI;;https://onderwijs.vlaanderen.be/nl/over-onderwijs-en-vorming/agodi-agentschap-voor-onderwijsdiensten;C;
+;;AHOVOKS;;https://www.vlaanderen.be/ahovoks;C;
+;;Artesis-Plantijn Hogeschool;;https://www.ap.be/;C;
+;;Colruyt;;https://www.colruyt.be/nl;C;
+;;Dibbs;;https://www.dibbs.be/;C;
+;;GO! Onderwijs van Vlaamse Gemeenschap;;https://g-o.be/;C;
+;;Hogeschool Gent;;https://hogent.be/;C;
+;;Hogeschool PXL;;https://www.pxl.be/;C;
+;;Hogeschool West-Vlaanderen;;https://www.howest.be/;C;
+;;Informat;;https://www.informat.be/;C;
+;;Itsme;;https://www.itsme.be/;C;
+;;Lemon Companies;;https://www.lemon.be/;C;
+;;Katholieke Universiteit Leuven;;https://www.kuleuven.be/;C;
+;;Manpower;;https://www.manpower.be/;C;
+;;Odisee;;https://www.odisee.be/;C;
+;;Onderwijskoepel Steden en Gemeenten OVSG;;https://www.ovsg.be/;C;
+;;Plantyn;;https://www.plantynacademy.be/;C;
+;;Randstad;;https://www.randstad.be/;C;
+;;Thomas More Hogeschool;;https://thomasmore.be/nl;C;
+;;Universiteit Antwerpen;;https://www.uantwerpen.be/nl/;C;
+;;Upgrade Estate;;https://upgrade-estate.be/en;C;
+
+
+
+
